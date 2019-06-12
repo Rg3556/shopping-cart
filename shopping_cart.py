@@ -45,12 +45,34 @@ products = [
 
 
 selected_id = input("Please input a product identifier: ") #> String input
-print(selected_id)
-# print(type(selected_id))
+matching_products = [p for p in products if str(p["id"]) ==  str(selected_id)]
+matching_product = matching_products[0]
+# print(matching_product)
+# print(type(matching_product))
+
+print("..." + matching_product["name"] + " " + str(matching_product["price"] ))
+
 
 
 ## Receipt / Output
 
+print("---------------------------------")
+print("GREEN FOODS GROCERY")
+print("WWW.GREEN-FOODS-GROCERY.COM")
+print("---------------------------------")
+
+
+# print("CHECKOUT AT: " + 2019-06-06 11:31 AM
+print("---------------------------------")
+print("SELECTED PRODUCTS: ")
+
+
+# def products_name(products):
+#     return products["name"]
+# 
+# for p in matching_product:
+#     price_usd = "${0:.2f}".format(p["price"])
+#     print(" ... " + p["name"] + " (" + str(price_usd) + ")")
 
 
 # A grocery store name of your choice
