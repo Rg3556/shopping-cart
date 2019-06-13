@@ -5,9 +5,9 @@ Anaconda 3.7
 Python 3.7
 Pip
 
-## SETUP ##
+# SETUP #
 
-# Repo Setup/Installation
+## Repo Setup/Installation
 
 Visit the source code repository for the Rg3556's shopping-cart project [github source] (https://github.com/Rg3556/shopping-cart) and click "Fork" to copy the repo under your own control.
 
@@ -29,7 +29,7 @@ Use your text editor or the command-line to create a file in that repo called "s
 
 
 
-# Environment Setup
+## Environment Setup
 
 Create and activate a new Anaconda virtual environment:
 
@@ -40,14 +40,13 @@ Create and activate a new Anaconda virtual environment:
 
 From within the virtual environment, install the pytest package:
 
-# NOTE: we won't need pytest until/unless addressing the optional "Automated Testing" challenge,
-# so you can feel free to skip this now and return later...
+## NOTE: we won't need pytest until/unless addressing the optional "Automated Testing" challenge,so you can feel free to skip this now and return later...
 
     ```sh
     pip install pytest
     ```
 
-## USAGE ##
+# USAGE #
 
 Run the shopping cart scripts, respectively:
 
