@@ -77,6 +77,29 @@ print("SELECTED PRODUCTS: ")
 # print(selected_ids)
 
 
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    matching_product = matching_products[0]
+    subtotal_price = subtotal_price + matching_product["price"]
+    subtotal_usd = "${0:.2f}".format(subtotal_price)
+    tax = subtotal_price* 0.0875
+    tax_usd = "${0:.2f}".format(tax)
+    total = subtotal_price + tax
+    total_usd = "${0:.2f}".format(total)
+    price_usd = "${0:.2f}".format(matching_product["price"])
+    print("..." + matching_product["name"] + " "+ "("  + price_usd + ")")
+
+
+
+print("---------------------------------")
+print("SUBTOTAL: " + str(subtotal_usd))
+print("TAX: " + str(tax_usd))
+print("TOTAL: " + str(total_usd))  
+print("---------------------------------")
+print("THANKS, SEE YOU AGAIN SOON!")
+print("---------------------------------")
+
+
 
 
 
