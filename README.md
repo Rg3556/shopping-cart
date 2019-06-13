@@ -1,11 +1,9 @@
 # Shopping-cart Projct
 
 ## Prerequisites ##
-Anaconda 3.7    
-
-Python 3.7
-
-Pip
+- Anaconda 3.7    
+- Python 3.7
+- Pip
 
 
 ## Setup ##
