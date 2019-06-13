@@ -48,18 +48,27 @@ products = [
 
 subtotal_price = 0
 selected_ids = []
+valid_ids = [str(p["id"]) for p in products] 
+
 
 while True:
+    selected_id = input("Please input a product identifier, or 'DONE': ") #> String input
     
-    selected_id = input("Please input a product identifier: ") #> String input
     if selected_id == "DONE":
         break
-    else: 
+
+    elif str(selected_id) in valid_ids: 
         # matching_products = [p for p in products if str(p["id"]) ==  str(selected_id)]
         # matching_product = matching_products[0]
         # total_price = total_price + matching_product["price"]
         # print("..." + matching_product["name"] + " " + str(matching_product["price"] ))
         selected_ids.append(selected_id)
+
+    else:
+        print("---------------------------------")
+        print("OH, detected invalid input! Please try again...")
+        print("---------------------------------")
+        next # proceeds into the next iteration of the loop (OK to omit in this basic example because there is no more code following it inside the loop before the loop repeats)
 
 ## Receipt / Output
 
