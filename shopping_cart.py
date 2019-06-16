@@ -11,14 +11,24 @@ import datetime
 
 
 import csv
+import sys
+import pprint
+
 
 csv_file_path = "Products Database.csv" # a relative filepath
 
 with open(csv_file_path, "r") as csv_file: # "r" means "open the file for reading"
     reader = csv.DictReader(csv_file) # assuming your CSV has headers
     # reader = csv.reader(csv_file) # if your CSV doesn't have headers
-    for row in reader:
-        print(row["id"], row["name"], row["department"], row["aisle"], row["price"])
+    # for row in reader:
+    #     print(row["id"], row["name"], row["department"], row["aisle"], row["price"])
+
+    dict_list = []
+    for line in reader:
+        dict_list.append(line)
+    # pprint.pprint(dict_list)
+
+
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -58,7 +68,7 @@ products = [
 
 subtotal_price = 0
 selected_ids = []
-valid_ids = [str(p["id"]) for p in products] 
+valid_ids = [str(p["id"]) for p in dict_list] 
 
 
 while True:
@@ -183,7 +193,7 @@ MY_ADDRESS = os.environ.get("MY_EMAIL_ADDRESS", "OOPS, please set env var called
 template_data = {
     "total_price_usd": str(total_usd),
     "human_friendly_timestamp": str(now.strftime("%Y-%m-%d ")) + str(now.strftime("%I:%M %p\n")),
-    "products":[p for p in products if str(p['id'])==str(selected_id)]
+    "products":[p for p in products if str(p["id"]) == str(selected_id)]
 } # or construct this dictionary ["name"]ynamically based on the results of some other process :-D
 
 client = SendGridAPIClient(SENDGRID_API_KEY)
