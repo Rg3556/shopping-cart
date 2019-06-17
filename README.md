@@ -57,9 +57,8 @@ Store and replace the API Key value in an environment variable called SENDGRID_A
 From within the virtual environment, install the pytest package:
     
     ```sh
-    pip install sendgrid==6.0.5
+    pip install sendgrid == 6.0.5
     ```
-
 
 
 ## Usage ##
