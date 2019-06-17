@@ -47,6 +47,20 @@ NOTE: we won't need pytest until/unless addressing the optional "Automated Testi
     pip install pytest
     ```
 
+### Sendgrid Setup
+
+To get receipt via emial, sign up for a Sendgrid free account:https://signup.sendgrid.com/, then click the link in a confirmation email to verify your account. Then create an API Key with "full access" permissions: https://app.sendgrid.com/settings/api_keys.
+
+Store and replace the API Key value in an environment variable called SENDGRID_API_KEY. Also set and replace with an environment variable called MY_EMAIL_ADDRESS to be the email address you just associated with your SendGrid account (e.g. "abc123@gmail.com").
+
+
+From within the virtual environment, install the pytest package:
+    ```sh
+    pip install sendgrid==6.0.5
+    ```
+
+
+
 ## Usage ##
 
 Run the shopping cart scripts, respectively:
